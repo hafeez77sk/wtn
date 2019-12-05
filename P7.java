@@ -1,13 +1,19 @@
 import java.util.*;
-class P7{
-public static void main(String[] args){
-	Scanner sc=new Scanner(System.in);
-	char s=sc.nextLine().charAt(0),a;
-	if(s>='a' && s<='z')
-	a=(char)(s-32);
-	else
-	a=(char)(s+32);
-	System.out.println("Old Value: "+s);
-	System.out.println("New Value: "+a);
-	}
+class P7
+{
+public static void main(String args[])
+{
+int a[]={10,20,10,90,87,90,87};
+int i,j;
+for(i=0;i<a.length;i++)
+{
+for(j=i+1;j<a.length;j++)
+{
+if(a[i]==a[j])
+a[j]=0;
+}
+if(a[i]!=0)
+System.out.print(+a[i]+",");
+}
+}
 }

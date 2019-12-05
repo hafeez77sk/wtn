@@ -1,52 +1,40 @@
+import java.lang.*;
 import java.util.*;
-class P9{
-public static void main(String[] args){
-if(args.length==0)
+class P9
 {
-System.out.println("Please enter the month in numbers");
-System.exit(0);
-}
-int i=Integer.parseInt(args[0]);
-switch(i)
+public static void main(String args[])
 {
-case 1:
-System.out.println("January");
-break;
-case 2:
-System.out.println("February");
-break;
-case 3:
-System.out.println("March");
-break;
-case 4:
-System.out.println("April");
-break;
-case 5:
-System.out.println("May");
-break;
-case 6:
-System.out.println("June");
-break;
-case 7:
-System.out.println("July");
-break;
-case 8:
-System.out.println("August");
-break;
-case 9:
-System.out.println("September");
-break;
-case 10:
-System.out.println("October");
-break;
-case 11:
-System.out.println("November");
-break;
-case 12:
-System.out.println("December");
-break;
-default:
-System.out.println("Invalid Month");
+int i;
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int a[]=new int[n];
+for(i=0;i<n;i++)
+a[i]=sc.nextInt();
+int s,d,sum;
+s=0;
+d=0;
+sum=0;
+for(i=0;i<n;i++)
+{
+if(a[i]==6)
+	{s=i;
 }
+if(a[i]==7)
+{	d=i;
+}
+}
+
+
+for(i=0;i<n;i++)
+{
+if(s<d)
+{
+if(i<s||i>d)
+sum=sum+a[i];
+}
+if(s>d)
+sum=sum+a[i];
+}
+System.out.println(sum);
 }
 }

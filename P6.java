@@ -1,19 +1,13 @@
-class P6{
-public static void main(String[] args){
-	int a=Integer.parseInt(args[1]);
-	if(args[0].equals("Male"))
-	{
-		if(a>=1 && a<=60)
-		System.out.println("Interest: 9.2%");
-		else if(a>=61 && a<=120)
-		System.out.println("Interest: 8.3%");
-	}
-	else if(args[0].equals("Female"))
-	{
-		if(a>=1 && a<=58)
-		System.out.println("Interest: 8.2%");
-		else if(a>=59 && a<=120)
-		System.out.println("Interest: 7.6%");
-	}
-	}
-}
+import java.util.Arrays; 
+  
+ class P6
+{ 
+    public static void main(String[] args) 
+    { 
+        
+        int[] arr = {13, 7, 6, 45, 21, 9, 101, 102}; 
+
+        Arrays.sort(arr); 
+        System.out.printf(Arrays.toString(arr)); 
+    } 
+} 

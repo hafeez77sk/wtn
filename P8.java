@@ -1,30 +1,41 @@
-import java.util.*;
-class P8{
-public static void main(String[] args){
+import java.util.*; 
+  
+class P8 { 
+      
+   
+          public static void main (String[] args) {  
 Scanner sc=new Scanner(System.in);
-char c=sc.next().charAt(0);
-switch(c)
-{
-case 'R':
-System.out.println("Red");
-break;
-case 'B':
-System.out.println("Blue");
-break;
-case 'G':
-System.out.println("Green");
-break;
-case 'O':
-System.out.println("Orange");
-break;
-case 'Y':
-System.out.println("Yellow");
-break;
-case 'W':
-System.out.println("White");
-break;
-default:
-System.out.println("Invalid Code");
-}
-}
-}
+int i;
+        int n =sc.nextInt(); 
+int arr[]=new int[n];
+for(i=0;i<n;i++)
+arr[i]=sc.nextInt();;       
+        Arrays.sort(arr); 
+        int mc = 1, r = arr[0]; 
+        int cc = 1;
+          
+        for (i = 1; i < n; i++) 
+        { 
+            if (arr[i] == arr[i - 1]) 
+                cc++; 
+            else 
+            { 
+                if (cc > mc) 
+                { 
+                    mc=cc; 
+                    r = arr[i - 1]; 
+                } 
+                cc = 1; 
+            } 
+        } 
+      
+        
+        if (cc > mc) 
+        { 
+            mc = cc; 
+            r = arr[n - 1]; 
+        } 
+      
+   System.out.println(r);
+ }
+} 
